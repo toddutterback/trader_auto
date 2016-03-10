@@ -1,1 +1,17 @@
-<h1>Trade your Auto</h1>
+<%= will_paginate @cars %>
+<table>
+  <thead>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+  </thead>
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td> <%= car.make %></td>
+        <td> <%= car.model %></td>
+        <td> <%= car.year %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
